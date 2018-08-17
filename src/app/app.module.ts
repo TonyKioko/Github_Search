@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { DateCountPipe } from './date-count.pipe';
 
 const routes:Routes=[
   {path:"ghprofile",component:GhprofileComponent},
@@ -26,7 +27,9 @@ const routes:Routes=[
     
     AboutComponent,
     
-    NotFoundComponent
+    NotFoundComponent,
+    
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
