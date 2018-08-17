@@ -9,3 +9,13 @@ img {
 .profile{
   float:left;
 }
+input {
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+    width:300px;
+    margin:auto;
+    padding:5px;
+}
+.form{
+  margin: 6px auto;
+}

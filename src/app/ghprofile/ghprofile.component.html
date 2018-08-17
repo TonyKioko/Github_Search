@@ -1,76 +1,79 @@
 <app-navbar></app-navbar>
-<div class="form search-form">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Enter github username" [(ngModel)]="username" name="username" (keyup)="searchProfile()">
+<div class="container">
+  <div class="form search-form">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Enter github username" [(ngModel)]="username" name="username" (keyup)="searchProfile()">
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <div *ngIf="profile">
+  <div class="row">
+    <div *ngIf="profile">
 
-    <div class="col-md-6 profile">
-      <div class="card">
-        <h4 class="card-header">{{profile.name}}</h4>
-        <div class="card-body">
-          <div class="row">
-            <div class="col-xl-4 m-b-1">
-              <img src="{{ profile.avatar_url }}" class="m-3" alt="">
-              <a href="{{ profile.html_url}}" class="btn btn-primary btn-lg ml-4" target="_blank">View Profile</a>
+      <div class="col-md-6 profile">
+        <div class="card">
+          <h4 class="card-header">{{profile.name}}</h4>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-4 m-b-1">
+                <img src="{{ profile.avatar_url }}" class="m-3" alt="">
+                <a href="{{ profile.html_url}}" class="btn btn-primary btn-lg ml-4" target="_blank">View Profile</a>
+              </div>
+
+              <div class="col-xl-8 pl-1">
+
+
+                <ul class="list-group">
+                  <li class="list-group-item"><b>Username: </b> {{profile.login}}</li>
+                  <li class="list-group-item"><b>Location: </b> {{profile.location}}</li>
+                  <li class="list-group-item"><b>E-Mail: </b> {{profile.email}}</li>
+                  <li class="list-group-item"><b>Blog Link: </b> {{profile.blog}}</li>
+                  <li class="list-group-item"><b>Member Since: </b> {{profile.created_at}}</li>
+                </ul>
+
+              </div>
             </div>
+            <div class="status m-t-1">
 
-            <div class="col-xl-8 pl-1">
+              <span class="p-a-05 bg-info text-xs-center"> {{profile.public_repos}} Public Repos </span>
+              <span class="p-a-05 bg-primary m-t-1 text-xs-center"> {{profile.public_gists}} Public Gists </span>
+              <span class="p-a-05 bg-danger m-t-1 text-xs-center"> {{profile.followers}} Followers </span>
+              <span class="p-a-05 bg-success m-t-1 text-xs-center"> {{profile.following}} Followings </span>
 
-
-              <ul class="list-group">
-                <li class="list-group-item"><b>Username: </b> {{profile.login}}</li>
-                <li class="list-group-item"><b>Location: </b> {{profile.location}}</li>
-                <li class="list-group-item"><b>E-Mail: </b> {{profile.email}}</li>
-                <li class="list-group-item"><b>Blog Link: </b> {{profile.blog}}</li>
-                <li class="list-group-item"><b>Member Since: </b> {{profile.created_at}}</li>
-              </ul>
 
             </div>
-          </div>
-          <div class="status m-t-1">
-
-            <span class="p-a-05 bg-info text-xs-center"> {{profile.public_repos}} Public Repos </span>
-            <span class="p-a-05 bg-primary m-t-1 text-xs-center"> {{profile.public_gists}} Public Gists </span>
-            <span class="p-a-05 bg-danger m-t-1 text-xs-center"> {{profile.followers}} Followers </span>
-            <span class="p-a-05 bg-success m-t-1 text-xs-center"> {{profile.following}} Followings </span>
-
-
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-6 repos">
-      <div>
-        <div class="card card2 card-default">
-          <div class="card card2 card-heading">
-            <h3 class=" card2 card-title">Repos</h3>
-          </div>
-          <div class="card2 card-body">
-            <div class="row">
-              <div class="col-md-12">
-                <div *ngFor="let repo of repos">
-                  <div class="row">
-                    <div class="col-md-9">
-                      <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
-                      <p>{{repo.description}}</p>
+      <div class="col-md-6 repos">
+        <div>
+          <div class="card card2 card-default">
+            <div class="card card2 card-heading">
+              <h3 class=" card2 card-title">Repos</h3>
+            </div>
+            <div class="card2 card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div *ngFor="let repo of repos">
+                    <div class="row">
+                      <div class="col-md-9">
+                        <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
+                        <p>{{repo.description}}</p>
+                      </div>
+                      <div class="col-md-3">
+                        <span class="badge badge-default">{{repo.watchers}} Watchers</span>
+                        <span class="badge badge-primary">{{repo.forks}} Forks</span>
+                      </div>
                     </div>
-                    <div class="col-md-3">
-                      <span class="badge badge-default">{{repo.watchers}} Watchers</span>
-                      <span class="badge badge-primary">{{repo.forks}} Forks</span>
-                    </div>
+                    <hr />
                   </div>
-                  <hr />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
+
 </div>
