@@ -6,10 +6,10 @@
     </div>
   </div>
 
-  <div class="row">
+  <!-- <div class="row"> -->
     <div *ngIf="profile">
 
-      <div class="col-md-6 profile">
+      <div class="col-md-12 profile">
         <div class="card">
           <h4 class="card-header">{{profile.name}}</h4>
           <div class="card-body">
@@ -20,7 +20,15 @@
               </div>
 
               <div class="col-xl-8 pl-1">
+                <div class="status m-t-1">
 
+                  <span class="p-a-05 bg-info text-xs-center"> {{profile.public_repos}} Public Repos </span>
+                  <span class="p-a-05 bg-primary m-t-1 text-xs-center"> {{profile.public_gists}} Public Gists </span>
+                  <span class="p-a-05 bg-danger m-t-1 text-xs-center"> {{profile.followers}} Followers </span>
+                  <span class="p-a-05 bg-success m-t-1 text-xs-center"> {{profile.following}} Followings </span>
+
+
+                </div>
 
                 <ul class="list-group">
                   <li class="list-group-item"><b>Username: </b> {{profile.login}}</li>
@@ -32,7 +40,7 @@
 
               </div>
             </div>
-            <div class="status m-t-1">
+            <!-- <div class="status m-t-1">
 
               <span class="p-a-05 bg-info text-xs-center"> {{profile.public_repos}} Public Repos </span>
               <span class="p-a-05 bg-primary m-t-1 text-xs-center"> {{profile.public_gists}} Public Gists </span>
@@ -40,11 +48,11 @@
               <span class="p-a-05 bg-success m-t-1 text-xs-center"> {{profile.following}} Followings </span>
 
 
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
-      <div class="col-md-6 repos">
+      <div class="col-md-12 repos">
         <div>
           <div class="card card2 card-default">
             <div class="card card2 card-heading">
@@ -74,6 +82,6 @@
       </div>
 
     </div>
-  </div>
+  <!-- </div> -->
 
 </div>
