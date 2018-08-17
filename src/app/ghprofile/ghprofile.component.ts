@@ -8,14 +8,25 @@ import { GithubprofileService } from '../services/githubprofile.service';
   styleUrls: ['./ghprofile.component.css']
 })
 export class GhprofileComponent implements OnInit {
-  username: any[];
-  profile: any[];
-  repos:any[];
+  username: string;
+  profile: any;
+  repos:any;
 
 
-  constructor() { }
+  constructor(private githubprofileService:GithubprofileService) { }
 
   ngOnInit() {
+  }
+  searchProfile(){
+    this.githubprofileService.updateProfile(this.username);
+    this.githubprofileService.acquireProfileInfo().subscribe(profile => {
+      console.log(profile);
+      this.profile = profile;
+    });
+    this.githubprofileService.acquireProfileRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    });
   }
 
 }
