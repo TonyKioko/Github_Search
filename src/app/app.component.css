@@ -2,3 +2,13 @@
 *{
   font-family: 'Roboto', sans-serif;
 }
+ul li{
+  float:right;
+  margin-left:200px;
+  color:white;
+  font-size: 30px;
+}
+ul li:hover {
+  text-decoration: none;
+  color:white;
+}

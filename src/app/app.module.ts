@@ -10,10 +10,12 @@ import { GithubprofileService } from './services/githubprofile.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes:Routes=[
-  {path:"goals",component:GhprofileComponent},
-  {path:"about",component:AboutComponent}
+  {path:"ghprofile",component:GhprofileComponent},
+  {path:"about",component:AboutComponent},
+  {path:'**',component:NotFoundComponent}
 ]
 
 @NgModule({
@@ -21,13 +23,16 @@ const routes:Routes=[
     AppComponent,
     GhprofileComponent,
     NavbarComponent,
-    RouterModule.forRoot(routes),
-    AboutComponent
+    
+    AboutComponent,
+    
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [GithubprofileService],
   bootstrap: [AppComponent]
