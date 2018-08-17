@@ -3,3 +3,9 @@ img {
     width:150px;
     margin-bottom:2px;
 }
+.repos {
+  float:right;
+}
+.profile{
+  float:left;
+}
