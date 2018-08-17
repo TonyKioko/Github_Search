@@ -8,6 +8,10 @@ import { GithubprofileService } from '../services/githubprofile.service';
   styleUrls: ['./ghprofile.component.css']
 })
 export class GhprofileComponent implements OnInit {
+  username: any[];
+  profile: any[];
+  repos:any[];
+
 
   constructor() { }
 
