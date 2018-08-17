@@ -8,12 +8,21 @@ import { AppComponent } from './app.component';
 import { GhprofileComponent } from './ghprofile/ghprofile.component';
 import { GithubprofileService } from './services/githubprofile.service';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about.component';
+
+const routes:Routes=[
+  {path:"goals",component:GhprofileComponent},
+  {path:"about",component:AboutComponent}
+]
 
 @NgModule({
-  declarations: [
+    declarations: [
     AppComponent,
     GhprofileComponent,
-    NavbarComponent
+    NavbarComponent,
+    RouterModule.forRoot(routes),
+    AboutComponent
   ],
   imports: [
     BrowserModule,
