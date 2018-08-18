@@ -35,7 +35,7 @@
                         <li class="list-group-item"><b>Username: </b> {{profile.login}}</li>
                         <li class="list-group-item"><b>Joined Github :{{
                             " "}} </b> {{profile.created_at | dateCount}}</li>
-                        <li class="list-group-item"><b>Location: </b> {{profile.location}}</li>
+                        <li *ngIf="profile.bio"class="list-group-item"><b>Bio : </b> {{profile.bio}}. (Lasty updated on {{profile.updated_at}})</li>
                         <li class="list-group-item"><b>E-Mail: </b> {{profile.email}}</li>
                         <li class="list-group-item"><b>Blog Link: </b> {{profile.blog}}</li>
                        
