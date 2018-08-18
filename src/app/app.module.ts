@@ -16,6 +16,7 @@ import { DateCountPipe } from './date-count.pipe';
 const routes:Routes=[
   {path:"ghprofile",component:GhprofileComponent},
   {path:"about",component:AboutComponent},
+  {path:"",redirectTo:"/goals",pathMatch:"full"},
   {path:'**',component:NotFoundComponent}
 ]
 

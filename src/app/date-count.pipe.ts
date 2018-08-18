@@ -44,9 +44,9 @@ export class DateCountPipe implements PipeTransform {
 		} else if (days <= 25) {
 			return days + ' days ago';
 		} else if (days <= 45) {
-			return 'a month ago';
+			return days+'days ago';
 		} else if (days <= 345) {
-			return months + ' months ago';
+			return days+' days ago';
 		} else if (days <= 545) {
 			return 'a year ago';
 		} else { // (days > 545)
