@@ -20,11 +20,9 @@ export class GhprofileComponent implements OnInit {
   searchProfile(){
     this.githubprofileService.updateProfile(this.username);
     this.githubprofileService.acquireProfileInfo().subscribe(profile => {
-      console.log(profile);
       this.profile = profile;
     });
     this.githubprofileService.acquireProfileRepos().subscribe(repos => {
-      console.log(repos);
       this.repos = repos;
     });
   }
