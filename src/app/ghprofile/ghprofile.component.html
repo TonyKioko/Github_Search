@@ -13,13 +13,13 @@
       <!-- <div class="col-md-12 profile"> -->
       <div class="row" id="user-info">
 
-          <div class="col-md-4" style="float:left;" id="">
+          <div class="col-md-4" style="float:left; background-color:green;margin-right:4%;width:600px;">
               <section id="avatar">
             <h2 class="name">{{profile.name}}</h2>
             <!-- <div class="row"> -->
             <!-- <div class="col-md-4 m-b-1"  style="float:left"> -->
               <img src="{{ profile.avatar_url }}" class="m-3" alt="">
-              <a href="{{ profile.html_url}}" class="btn btn-primary btn-lg ml-4" target="_blank">View Profile</a>
+              <a href="{{ profile.html_url}}" class="btn btn-primary btn-outline view-profile" target="_blank">View Profile</a>
             <!-- </div> -->
               </section>
           </div>
@@ -83,7 +83,7 @@
           <div class="card2 card-body">
             <div class="row">
               <div class="col-md-12">
-                <div *ngFor="let repo of repos">
+                <div *ngFor="let repo of repos" id="repo-details">
                   <div class="row">
                     <div class="col-md-9">
                       <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
@@ -92,6 +92,7 @@
                     <div class="col-md-3">
                       <span class="badge badge-default">{{repo.watchers}} Watchers</span>
                       <span class="badge badge-primary">{{repo.forks}} Forks</span>
+                    
                     </div>
                   </div>
                   <hr />
