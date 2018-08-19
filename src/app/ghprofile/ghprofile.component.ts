@@ -18,7 +18,7 @@ export class GhprofileComponent implements OnInit {
 
   ngOnInit() {
   }
-  searchProfile(){
+  searchUser(){
     this.githubprofileService.updateProfile(this.username);
     this.githubprofileService.acquireProfileInfo().subscribe(profile => {
       this.profile = profile;
