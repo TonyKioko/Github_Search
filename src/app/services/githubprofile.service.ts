@@ -8,16 +8,15 @@ export class GithubprofileService {
   private username: string;
   private apiKey = 'd20f70c1ffa0ea106e7ab01ba8d7f753e83dab8a';
 
-  constructor(private http:HttpClient) { 
-    console.log("service is ready");
+  constructor(private _http:HttpClient) {
     this.username ='TonyKioko';
-    
+
   }
   acquireProfileInfo(){
-    return this.http.get("https://api.github.com/users/"+this.username+"?access_token=" +this.apiKey);
+    return this._http.get("https://api.github.com/users/"+this.username+"?access_token=" +this.apiKey);
   }
   acquireProfileRepos(){
-    return this.http.get("https://api.github.com/users/"+this.username + "/repos"+"?access_token=" +this.apiKey);
+    return this._http.get("https://api.github.com/users/"+this.username + "/repos"+"?access_token=" +this.apiKey);
   }
   updateProfile(username:string){
     this.username = username;

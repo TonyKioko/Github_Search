@@ -12,6 +12,11 @@ button {
   margin:3%;
   border-radius: 3px;
 }
+#created {
+  font-size: 16px;
+  margin-left: 20px;
+  font-style: italic;
+}
 .profile{
   margin-bottom:6px;
 }
