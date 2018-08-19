@@ -11,6 +11,7 @@ export class GhprofileComponent implements OnInit {
   username: string;
   profile: any;
   repos:any;
+  num: number;
 
 
   constructor(private githubprofileService:GithubprofileService) { }
@@ -24,6 +25,8 @@ export class GhprofileComponent implements OnInit {
     });
     this.githubprofileService.acquireProfileRepos().subscribe(repos => {
       this.repos = repos;
+      this.num = this.repos.length;
+      console.log(this.num)
     });
   }
 
