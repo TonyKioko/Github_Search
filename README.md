@@ -11,14 +11,14 @@ GithubSearch is a web application where users may enter a GitHub username into a
 
 
 ### Live Link ###
- https://tonykioko.github.io/Quotes_App/
+ https://tonykioko.github.io/Github_Search/
 ## Setup/Installation Requirements.
 * Install Angular CLI and other necessary softwares required to run angular apps
 * Git clone https://github.com/TonyKioko/Quotes_App or download and unzip the repository from github.
 * Navigate into cloned file and  run ng serve. Navigate to http://localhost:4200/ in your favorite browser to load app.
 
 
-## Technology used ##
+## Technologies used ##
 
 * Angular JS
 * HTML
