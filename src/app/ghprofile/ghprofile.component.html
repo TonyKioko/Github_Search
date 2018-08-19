@@ -13,20 +13,20 @@
       <!-- <div class="col-md-12 profile"> -->
       <div class="row" id="user-info">
 
-          <div class="col-md-4" style="float:left; background-color:green;margin-right:4%;width:600px;">
-              <section id="avatar">
+        <div class="col-md-4" style="float:left; background-color:#76B695;margin-right:7%;margin-left: :-10px">
+          <section id="avatar">
             <h2 class="name">{{profile.name}}</h2>
             <!-- <div class="row"> -->
             <!-- <div class="col-md-4 m-b-1"  style="float:left"> -->
-              <img src="{{ profile.avatar_url }}" class="m-3" alt="">
-              <a href="{{ profile.html_url}}" class="btn btn-primary btn-outline view-profile" target="_blank">View Profile</a>
+            <img src="{{ profile.avatar_url }}" class="m-3" alt="">
+            <a href="{{ profile.html_url}}" class="btn btn-primary btn-outline view-profile" target="_blank">View Profile</a>
             <!-- </div> -->
-              </section>
-          </div>
+          </section>
+        </div>
 
 
-          <div class="col-md-7" style="float:right;">
-              <section id="details">
+        <div class="col-md-7" style="float:right;">
+          <section id="details">
             <!-- <div class="col-md-8 pl-1" id="details" style="float:right"> -->
             <div class="card">
               <div class="card-body">
@@ -61,8 +61,8 @@
 
                   </div> -->
             <!-- </div> -->
-              </section>
-          </div>
+          </section>
+        </div>
 
 
       </div>
@@ -72,37 +72,37 @@
 
 
 
-    <!-- </div> -->
+      <!-- </div> -->
 
-    <div *ngIf="profile.public_repos" class="col-md-12 repos">
-      <div>
-        <div class="card card-default">
-          <div class="card  card-heading">
-            <h3 class="card-title">List of {{ profile.login }}'s {{profile.public_repos}} Public Repos</h3>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-12">
-                <div *ngFor="let repo of repos" id="repo-details">
-                  <div class="row">
-                    <div class="col-md-9">
-                      <h2><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a><span id="created">Created {{ repo.created_at | dateCount }}</span></h2>
-                      <p>{{repo.description}}</p>
-                    </div>
-                    <div class="col-md-3">
-                      <span class="badge badge-default">{{repo.watchers}} Watchers</span>
-                      <span class="badge badge-primary">{{repo.forks}} Forks</span>
+      <div *ngIf="profile.public_repos" class="col-md-12 repos">
+        <div>
+          <div class="card card-default">
+            <div class="card  card-heading">
+              <h3 class="card-title">List of {{ profile.login }}'s {{profile.public_repos}} Public Repos</h3>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div *ngFor="let repo of repos" id="repo-details">
+                    <div class="row">
+                      <div class="col-md-9">
+                        <h2><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a><span id="created">Created {{ repo.created_at | dateCount }}</span></h2>
+                        <p>{{repo.description}}</p>
+                      </div>
+                      <div class="col-md-3">
+                        <span class="badge badge-default">{{repo.watchers}} Watchers</span>
+                        <span class="badge badge-primary">{{repo.forks}} Forks</span>
 
+                      </div>
                     </div>
+                    <hr />
                   </div>
-                  <hr />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
   <!-- </div> -->
