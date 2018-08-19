@@ -18,7 +18,7 @@ export class GithubprofileService {
   acquireProfileRepos(){
     return this._http.get("https://api.github.com/users/"+this.username + "/repos"+"?access_token=" +this.apiKey);
   }
-  updateProfile(username:string){
+  updateUserName(username:string){
     this.username = username;
 
   }
