@@ -23,6 +23,7 @@ button {
 input {
     font-family: 'Roboto', sans-serif;
     text-align:center;
+    font-size: 18px;
     width:500px;
     margin:auto;
     padding:5px;

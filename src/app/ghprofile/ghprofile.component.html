@@ -42,7 +42,7 @@
                 </ul>
                 <p class="status m-t-1">
 
-                  <button class="p-a-05 bg-primay text-xs-center"> {{profile.public_repos}} Public Repos </button>
+                  <button class="p-a-05 bg-primary text-xs-center"> {{profile.public_repos}} Public Repos </button>
                   <button class="p-a-05 bg-primary m-t-1 text-xs-center"> {{profile.followers}} Followers </button>
                   <button class="p-a-05 bg-primary m-t-1 text-xs-center"> {{profile.following}} Followings </button>
 
@@ -76,11 +76,11 @@
 
     <div *ngIf="profile.public_repos" class="col-md-12 repos">
       <div>
-        <div class="card card2 card-default">
-          <div class="card card2 card-heading">
-            <h3 class=" card2 card-title">List of {{ profile.login }}'s {{profile.public_repos}} Public Repos</h3>
+        <div class="card card-default">
+          <div class="card  card-heading">
+            <h3 class="card-title">List of {{ profile.login }}'s {{profile.public_repos}} Public Repos</h3>
           </div>
-          <div class="card2 card-body">
+          <div class="card-body">
             <div class="row">
               <div class="col-md-12">
                 <div *ngFor="let repo of repos" id="repo-details">
