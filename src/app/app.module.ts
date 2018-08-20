@@ -14,6 +14,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DateCountPipe } from './date-count.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 // const routes:Routes=[
 //   {path:"ghprofile",component:GhprofileComponent},
@@ -32,7 +33,9 @@ import { DateCountPipe } from './date-count.pipe';
     
     NotFoundComponent,
     
-    DateCountPipe
+    DateCountPipe,
+    
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

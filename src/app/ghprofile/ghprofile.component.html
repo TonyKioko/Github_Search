@@ -83,10 +83,10 @@
             <div class="card-body">
               <div class="row">
                 <div class="col-md-12">
-                  <div *ngFor="let repo of repos" id="repo-details">
+                  <div *ngFor="let repo of repos;let i = index" id="repo-details">
                     <div class="row">
                       <div class="col-md-9">
-                        <h2><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a><span id="created">Created {{ repo.created_at | dateCount }}</span></h2>
+                        <h2><a href="{{repo.html_url}}" target="_blank" id="{{i}}" appHighlight>{{repo.name}}</a><span id="created">Created {{ repo.created_at | dateCount }}</span></h2>
                         <p>{{repo.description}}</p>
                       </div>
                       <div class="col-md-3">
