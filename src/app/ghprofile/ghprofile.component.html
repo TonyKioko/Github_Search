@@ -16,8 +16,7 @@
         <div class="col-md-4" style="float:left; background-color:#76B695;margin-right:7%;">
           <section id="avatar">
             <h2 class="name">{{profile.name}}</h2>
-            <!-- <div class="row"> -->
-            <!-- <div class="col-md-4 m-b-1"  style="float:left"> -->
+
             <img src="{{ profile.avatar_url }}" class="m-3" alt="">
             <a href="{{ profile.html_url}}" class="btn btn-primary btn-outline view-profile" target="_blank">View Profile</a>
             <!-- </div> -->
@@ -42,37 +41,21 @@
                 </ul>
                 <p class="status m-t-1">
 
-                  <button class="p-a-05 bg-primary text-xs-center"> {{profile.public_repos}} Public Repos </button>
-                  <button class="p-a-05 bg-primary m-t-1 text-xs-center"> {{profile.followers}} Followers </button>
-                  <button class="p-a-05 bg-primary m-t-1 text-xs-center"> {{profile.following}} Followings </button>
+                  <button class="bg-primary text-xs-center"> {{profile.public_repos}} Public Repos </button>
+                  <button class="bg-primary m-t-1 text-xs-center"> {{profile.followers}} Followers </button>
+                  <button class="bg-primary m-t-1 text-xs-center"> {{profile.following}} Followings </button>
 
 
                 </p>
 
               </div>
             </div>
-            <!-- <div class="status m-t-1">
-
-                    <span class="p-a-05 bg-info text-xs-center"> {{profile.public_repos}} Public Repos </span>
-                    <span class="p-a-05 bg-primary m-t-1 text-xs-center"> {{profile.public_gists}} Public Gists </span>
-                    <span class="p-a-05 bg-danger m-t-1 text-xs-center"> {{profile.followers}} Followers </span>
-                    <span class="p-a-05 bg-success m-t-1 text-xs-center"> {{profile.following}} Followings </span>
-
-
-                  </div> -->
-            <!-- </div> -->
+          
           </section>
         </div>
 
 
       </div>
-      <!-- <div class="card"> -->
-      <!-- <h4 class="card-header name">{{profile.name}}</h4> -->
-      <!-- <div class="card-body"> -->
-
-
-
-      <!-- </div> -->
 
       <div *ngIf="profile.public_repos" class="col-md-12 repos">
         <div>
@@ -90,7 +73,7 @@
                         <p>{{repo.description}}</p>
                       </div>
                       <div class="col-md-3">
-                        <span class="badge badge-default">{{repo.watchers}} Watchers</span>
+                        <span class="badge badge-primary mx-1">{{repo.watchers}} Watchers</span>
                         <span class="badge badge-primary">{{repo.forks}} Forks</span>
 
                       </div>
@@ -105,7 +88,5 @@
       </div>
     </div>
   </div>
-  <!-- </div> -->
-  <!-- </div>
-      </div> -->
+  
 </section>
