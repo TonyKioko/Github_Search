@@ -10,7 +10,7 @@ export class GithubprofileService {
   // private apiKey = 'd20f70c1ffa0ea106e7ab01ba8d7f753e83dab8a';
 
   constructor(private _http:HttpClient) {
-    this.username ='TonyKioko';
+    // this.username ='TonyKioko';
 
   }
   acquireProfileInfo(){
