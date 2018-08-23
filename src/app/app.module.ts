@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+// import {HttpClientModule} from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { FormsModule} from '@angular/forms';
 import {RoutingModule} from './routing/routing.module';
 import {TimeAgoPipe} from 'time-ago-pipe';
@@ -41,7 +42,8 @@ import { HighlightDirective } from './highlight.directive';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    // HttpClientModule,
+    HttpModule,
     FormsModule,
     RoutingModule
     // RouterModule.forRoot(routes)
