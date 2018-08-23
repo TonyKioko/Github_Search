@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 // import {HttpClient,Headers} from '@angular/common/http';
-import { Http,Headers } from '@angular/http';
+import { Http } from '@angular/http';
 import {environment} from '../../environments/environment';
 import { Observable, Subject } from 'rxjs';
 import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class GithubprofileService {
   // private apiKey = 'd20f70c1ffa0ea106e7ab01ba8d7f753e83dab8a';
 
   constructor(private _http:Http) {
-    // this.username ='TonyKioko';
+    // this.username =TonyKioko';
 
   }
   acquireProfileInfo(){
